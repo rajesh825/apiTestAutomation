@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/bjss/Login/LoginTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/bjss/Utils/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/bjss/testdata/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/bjss/utils/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/org/bjss/utils1/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/org/bjss/Login/LoginTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/MyLearning/apitesting/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/MyLearning/apitesting/src/main/java/com/bjss/Utils/IntegrationTestException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/MyLearning/apitesting/src/main/java/com/bjss/Utils/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
