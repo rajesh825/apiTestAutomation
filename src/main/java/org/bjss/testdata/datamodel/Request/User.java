@@ -1,5 +1,8 @@
-package org.bjss.testdata;
+package org.bjss.testdata.datamodel.Request;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User {
 
   private String username;

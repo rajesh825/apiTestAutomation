@@ -1,11 +1,9 @@
 package org.bjss.Login;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsNull.notNullValue;
 
 import io.restassured.response.Response;
-import org.bjss.testdata.User;
+import org.bjss.testdata.datamodel.Request.User;
 import org.bjss.utils.TestBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,8 +32,13 @@ public class LoginTests extends TestBase {
     };
   }
 
+
+  /**
+   * Test verifies Login can be successful using Valid User Credentials
+   * @param userCredentials
+   */
   @Test(dataProvider = "validUserData")
-  public void LoginWithValidUser(User userCredentials){
+  public void LoginWithValidUserTest(User userCredentials){
 
      Response response = given()
                             .relaxedHTTPSValidation()
@@ -53,13 +56,17 @@ public class LoginTests extends TestBase {
 
     String token = response.path("token");
     Assert.assertNotNull(token);
-
-    response = null;
+//
+//    response = null;
 
   }
 
+  /**
+   * Test verifies Login fails for invalid User Credentials
+   * @param userCredentials
+   */
   @Test(dataProvider = "invalidUserData")
-  public void LoginWithInValidUser(User userCredentials){
+  public void LoginWithInValidUserTest(User userCredentials){
 
     Response response = given()
                           .relaxedHTTPSValidation()
