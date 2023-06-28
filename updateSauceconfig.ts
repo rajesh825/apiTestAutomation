@@ -6,6 +6,39 @@ type Value = string | string[];  // This is the type for propertyValue now
 
 const doc: SauceConfig = yaml.load(fs.readFileSync(ymlconfiguration,'utf8')) as SauceConfig;
 
+import { stringify, parse } from 'yaml';
+import * as fs from 'fs';
+
+export function updateYamlConfig(propertyToUpdate: string, propertyValue: any) {
+    try {
+        // read the yaml file
+        const file: string = fs.readFileSync('./path/to/your/config.yaml', 'utf8');
+
+        // convert the yaml file to javascript object
+        const config: any = parse(file);
+
+        // update the property in the config object
+        if (Array.isArray(propertyValue)) {
+            config[propertyToUpdate] = propertyValue;
+        } else {
+            config[propertyToUpdate] = propertyValue;
+        }
+
+        // convert the javascript object back to yaml
+        const yamlStr: string = stringify(config, {
+            simpleKeys: true,
+            noRefs: true,
+        });
+
+        // write the updated config back to the file
+        fs.writeFileSync('./path/to/your/config.yaml', yamlStr, 'utf8');
+        
+    } catch(e) {
+        console.log(e);
+    }
+}
+
+
 export function updateConfig(propertyToUpdate: string, propertyValue: Value){
     // Do nothing if propertyValue is empty or null
     if (!propertyValue || (Array.isArray(propertyValue) && propertyValue.length === 0)) {
